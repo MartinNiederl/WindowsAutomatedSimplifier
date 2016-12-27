@@ -1,0 +1,18 @@
+﻿<Window x:Class="WindowsAutomatedSimplifier.DeCompress.DeCompress"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsAutomatedSimplifier.DeCompress"
+        mc:Ignorable="d"
+        Title="DeCompressWindow" Height="172.684" Width="431">
+    <Grid Height="139" VerticalAlignment="Top">
+        <CheckBox x:Name="cb_comp_decomp" Content="Decompress" HorizontalAlignment="Left" Margin="10,32.062,0,0" VerticalAlignment="Top" Click="cb_comp_decomp_Clicked" FontWeight="Bold"/>
+        <Label x:Name="lbl_archiveFormat" Content="Archive Format:" HorizontalAlignment="Left" Margin="110,18.092,0,0" VerticalAlignment="Top" Height="25" Width="124" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cob_archive" Margin="240,22.052,0,0" VerticalAlignment="Top" SelectedIndex="0" HorizontalAlignment="Left" Width="120" SelectionChanged="cob_archive_SelectionChanged"/>
+        <Label x:Name="lbl_compressionFormat" Content="Compression Format:" HorizontalAlignment="Left" Margin="110,54.092,0,0" VerticalAlignment="Top" Width="124" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cob_compress" Margin="240,54.092,0,0" VerticalAlignment="Top" SelectedIndex="14" Width="120" HorizontalAlignment="Left"/>
+        <Button x:Name="button" Content="{Binding Content, ElementName=cb_comp_decomp}" Click="button_Click" VerticalAlignment="Top" HorizontalAlignment="Center" Width="80" FontWeight="Bold" Margin="0,100,0,0" Height="24"/>
+        <Button x:Name="button1" Content="Button" Click="OpenFileDialog_Click" HorizontalAlignment="Left" Margin="31.79,0,0,19.04" VerticalAlignment="Bottom" Width="75"/>
+    </Grid>
+</Window>
