@@ -15,7 +15,7 @@ namespace WindowsAutomatedSimplifier.DeCompress
         public static List<NamedList> Decompress { get; } = new List<NamedList> { Zip, Tar, GZip, Rar, SevenZip };
     }
 
-    internal class NamedList
+    public class NamedList
     {
         public string Name { get; set; }
         public List<string> List { get; set; }
@@ -25,5 +25,7 @@ namespace WindowsAutomatedSimplifier.DeCompress
             Name = name;
             List = list;
         }
+
+        public override string ToString() => Name;
     }
 }

@@ -3,11 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WindowsAutomatedSimplifier"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        WindowStartupLocation="CenterScreen"
+        Title="Windows Automated Simplifier" Height="200" Width="304">
     <Grid>
-        <Button x:Name="btn_compress" Content="Compress" HorizontalAlignment="Left" Margin="60,30,0,0" VerticalAlignment="Top" Width="75" Click="Btn_compress_OnClick"/>
-        <Button x:Name="btn_decompress" Content="Decompress" HorizontalAlignment="Left" Margin="60,55,0,0" VerticalAlignment="Top" Width="75" Click="Btn_decompress_OnClick"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+            <RowDefinition Height="24"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="BtnCompress" Content="Compress" Click="Btn_compress_OnClick" Grid.Row="0" Margin="2"/>
+        <Button x:Name="BtnDecompress" Content="Decompress" Click="Btn_decompress_OnClick" Grid.Row="0" Grid.Column="2" Margin="2"/>
+        <Button x:Name="BtnIconSpacing" Content="IconSpacing" Click="BtnIconSpacing_OnClick" Grid.Row="1" Grid.Column="1" Margin="2"/>
     </Grid>
 </Window>
