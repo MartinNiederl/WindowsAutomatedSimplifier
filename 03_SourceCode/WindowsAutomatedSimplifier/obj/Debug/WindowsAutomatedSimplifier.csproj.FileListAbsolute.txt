@@ -1,0 +1,39 @@
+C:\Users\Mani\Documents\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.exe.config
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.exe.config
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.exe
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.pdb
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\SharpCompress.dll
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.csprojResolveAssemblyReference.cache
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\App.g.cs
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier_Content.g.cs
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier_MarkupCompile.cache
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.g.resources
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.Properties.Resources.resources
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.csproj.GenerateResource.Cache
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.exe
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.pdb
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\DeCompress\CompressWindow.g.cs
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\DeCompress\CompressWindow.baml
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\IconSpacing\IconSpacingWindow.baml
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\IconSpacing\IconSpacingWindow.g.cs
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\MainWindow.baml
+M:\Schule\SYP Projekt\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\MainWindow.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.exe.config
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.exe
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.pdb
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.exe
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\WindowsAutomatedSimplifier.pdb
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\bin\Debug\SharpCompress.dll
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.csprojResolveAssemblyReference.cache
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\DeCompress\CompressWindow.baml
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\IconSpacing\IconSpacingWindow.baml
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\MainWindow.baml
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\DeCompress\CompressWindow.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\IconSpacing\IconSpacingWindow.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\MainWindow.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\App.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier_Content.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier_MarkupCompile.cache
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.g.resources
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.Properties.Resources.resources
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WindowsAutomatedSimplifier\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.csproj.GenerateResource.Cache
