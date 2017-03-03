@@ -29,11 +29,13 @@
         <Label x:Name="Vertical" Content="Vertical:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"/>
         <Slider x:Name="VSlider" Grid.Row="0" Grid.Column="1" Minimum="480" Maximum="2730" LargeChange="100" SmallChange="10" IsSnapToTickEnabled="True"/>
         <Label x:Name="Horizontal" Content="Horizontal:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
-        <Slider x:Name="HSlider" Grid.Row="1" Grid.Column="1" Minimum="480" Maximum="2730" LargeChange="100" SmallChange="10" IsSnapToTickEnabled="True"/>
+        <Slider x:Name="HSlider" Grid.Row="1" Grid.Column="1" Minimum="480" Maximum="2730" LargeChange="100" SmallChange="10" IsSnapToTickEnabled="True" Width="180"/>
 
         <Button x:Name="ApplyChangesBtn" Content="Change" Click="ApplyChangesBtn_OnClick" Grid.Row="2" Grid.Column="0" Margin="0,14,4,4"/>
-        <CheckBox x:Name="ExpCheckBox" Content="Restart explorer for changes?" Grid.Row="2" Grid.Column="1" Margin="10,17,0,0"/>
+        <Button x:Name="ResetSliderBtn" Content="ResetSlider" Click="ResetSliderBtn_OnClick" Grid.Column="1" Margin="0,14,0,4" Grid.Row="2" Width="80"/>
+
         <Label Content="{Binding Value, ElementName=VSlider}" Grid.Column="2" Grid.Row="0"/>
         <Label Content="{Binding Value, ElementName=HSlider}" Grid.Column="2" Grid.Row="1"/>
+        
     </Grid>
 </Window>

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Windows;
 
-namespace WindowsAutomatedSimplifier
+namespace WindowsAutomatedSimplifier.Repository
 {
     public class AutoClosingMessageBox
     {

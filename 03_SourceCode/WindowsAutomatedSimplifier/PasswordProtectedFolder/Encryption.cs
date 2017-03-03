@@ -30,38 +30,36 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
         /// <summary>
         ///     Encrypts a string with a given password.
         /// </summary>
-        /// <param name="clearText">The clear text.</param>
+        /// <param name="clearBytes">The clear Bytes.</param>
         /// <param name="password">The password.</param>
-        public static string EncryptString(string clearText, string password)
+        public static byte[] EncryptBytes(byte[] clearBytes, string password)
         {
             SymmetricAlgorithm algorithm = GetAlgorithm(password);
             ICryptoTransform encryptor = algorithm.CreateEncryptor();
-            var clearBytes = Encoding.Unicode.GetBytes(clearText);
             using (MemoryStream ms = new MemoryStream())
             using (CryptoStream cs = new CryptoStream(ms, encryptor, CryptoStreamMode.Write))
             {
                 cs.Write(clearBytes, 0, clearBytes.Length);
                 cs.Close();
-                return Convert.ToBase64String(ms.ToArray());
+                return ms.ToArray();
             }
         }
 
         /// <summary>
         ///     Decrypts a string using a given password.
         /// </summary>
-        /// <param name="cipherText">The cipher text.</param>
+        /// <param name="cipherBytes">The cipher Bytes.</param>
         /// <param name="password">The password.</param>
-        public static string DecryptString(string cipherText, string password)
+        public static byte[] DecryptBytes(byte[] cipherBytes, string password)
         {
             SymmetricAlgorithm algorithm = GetAlgorithm(password);
             ICryptoTransform decryptor = algorithm.CreateDecryptor();
-            var cipherBytes = Convert.FromBase64String(cipherText);
             using (MemoryStream ms = new MemoryStream())
             using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Write))
             {
                 cs.Write(cipherBytes, 0, cipherBytes.Length);
                 cs.Close();
-                return Encoding.Unicode.GetString(ms.ToArray());
+                return ms.ToArray();
             }
         }
     }

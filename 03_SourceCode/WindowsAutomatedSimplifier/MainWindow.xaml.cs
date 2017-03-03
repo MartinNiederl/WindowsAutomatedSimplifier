@@ -1,11 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using WindowsAutomatedSimplifier.ChangeFont;
+//using System.Windows.Forms;
 using WindowsAutomatedSimplifier.DeCompress;
 using WindowsAutomatedSimplifier.IconSpacing;
 using WindowsAutomatedSimplifier.PasswordProtectedFolder;
+using WindowsAutomatedSimplifier.RegistryHelper;
 using WindowsAutomatedSimplifier.Repository;
+using Microsoft.Win32;
+using Button = System.Windows.Controls.Button;
 using OpenFileDialog = Microsoft.Win32.OpenFileDialog;
 
 namespace WindowsAutomatedSimplifier
@@ -16,7 +24,7 @@ namespace WindowsAutomatedSimplifier
         {
             InitializeComponent();
             WindowManager.AddWindow(this);
-            InitRegistry();
+            RegistryAPI.InitRegistry();
         }
 
         /// <summary>
@@ -48,23 +56,62 @@ namespace WindowsAutomatedSimplifier
             AutoClosingMessageBox.Show("Finished Successfully", "Closing...", 1000);
         }
 
-        private void BtnIconSpacing_OnClick(object sender, RoutedEventArgs e)
-        {
-            new IconSpacingWindow().ShowDialog();
-        }
+        private void BtnIconSpacing_OnClick(object sender, RoutedEventArgs e) => new IconSpacingWindow().ShowDialog();
 
         private void BtnCreateProtectedFolder_Click(object sender, RoutedEventArgs e)
         {
             //FolderBrowserDialog fbDialog = new FolderBrowserDialog();
             //if (fbDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
             //new ProtectedFolder(fbDialog.SelectedPath);
-            new ProtectedFolder(@"C:\Users\Mani\Documents\Schule\Projektentwicklung\PWF TestOrdner");
+            new ProtectedFolder(@"C:\Users\Mani\Documents\Schule\Projektentwicklung\PWF TestOrdner", "password");
         }
 
-        private static void InitRegistry()
+        private void BtnReadProtectedFolder_Click(object sender, RoutedEventArgs e)
         {
-            RegistryAPI api = new RegistryAPI();
-            api.AddKey(@"HKEY_CURRENT_USER\Software\Classes\directory\shell\", "WAS", "Verschlüsseln");
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "PasswordEncryptedFile (*.pwf)|*.pwf";
+            ofd.ShowDialog();
+            FolderReader fr = new FolderReader(ofd.FileName);
+            fr.SaveAllFiles();
+        }
+
+        private void BtnDeleteEmptyFolders_Click(object sender, RoutedEventArgs e) => FileSystem.FileSystem.DeleteEmptyDirectories("C:\\Users\\Mani\\Documents\\Schule\\Projektentwicklung\\TESTORDNER", false);
+
+        private void BtnSetAeroSpeed_Click(object sender, RoutedEventArgs e) => Registry.SetValue(@"HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "DesktopLivePreviewHoverTime", (int)MSecSlider.Value, RegistryValueKind.DWord);
+
+        private void SCExtension(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null && button.Name.Contains("Activate")) ShortcutExtension.se_enable();
+            else ShortcutExtension.se_disable();
+        }
+
+        private void UpdateRegistry_Click(object sender, RoutedEventArgs e)
+        {
+            Task.Run(() =>
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo()
+                {
+                    Verb = "runas",
+                    Arguments = "/f /im explorer.exe",
+                    FileName = @"C:\windows\system32\taskkill.exe"
+                };
+                Process process = new Process { StartInfo = startInfo };
+                process.Start();
+                process.WaitForExit();
+                startInfo = new ProcessStartInfo()
+                {
+                    Verb = "runas",
+                    FileName = @"C:\windows\explorer.exe"
+                };
+                process = new Process { StartInfo = startInfo };
+                process.Start();
+            });
+        }
+
+        private void FontChange_Click(object sender, RoutedEventArgs e)
+        {
+            new FontPicker().ShowDialog();
         }
     }
 }

@@ -5,11 +5,11 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
 {
     internal class ByteFile
     {
-        public string Name { get; }
-        public string Path { get; }
-        public string RelativePath { get; }
-        public byte[] Content { get; }
-        public int Length { get; }
+        public string Name { get; set; }
+        public string Path { get; set; }
+        public string RelativePath { get; set; }
+        public byte[] Content { get; set; }
+        public int Length { get; set; }
 
         public ByteFile(string path, string root)
         {
@@ -18,6 +18,18 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
             Content = File.ReadAllBytes(path);
             Length = Content.Length;
             if (file.Length != Length) throw new Exception("Error when reading the file! File sizes are not same!");
+            Path = path;
+            RelativePath = GetRelativePath(path, root);
+            Name = path.Substring(path.LastIndexOf(@"\", StringComparison.Ordinal));
+        }
+
+        public ByteFile(string path, string root, string password)
+        {
+            FileInfo file = new FileInfo(path);
+            if (!file.Exists) return;
+            Content = Encryption.EncryptBytes(File.ReadAllBytes(path), password);
+            Length = Content.Length;
+            //if (file.Length != Length) throw new Exception("Error when reading the file! File sizes are not same!");
             Path = path;
             RelativePath = GetRelativePath(path, root);
             Name = path.Substring(path.LastIndexOf(@"\", StringComparison.Ordinal));

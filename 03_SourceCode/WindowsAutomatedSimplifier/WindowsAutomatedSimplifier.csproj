@@ -48,6 +48,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,17 +68,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangeFont\ChangeFont.xaml.cs">
+      <DependentUpon>ChangeFont.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystem\FileSystem.cs" />
     <Compile Include="PasswordProtectedFolder\ByteFile.cs" />
     <Compile Include="PasswordProtectedFolder\Encryption.cs" />
     <Compile Include="PasswordProtectedFolder\FolderReader.cs" />
     <Compile Include="PasswordProtectedFolder\ProtectedFolder.cs" />
-    <Compile Include="RegistryAPI.cs" />
+    <Compile Include="RegistryHelper\RegistryAPI.cs" />
+    <Compile Include="RegistryHelper\ShellNotification.cs" />
     <Compile Include="Repository\AutoClosingMessageBox.cs" />
     <Compile Include="IconSpacing\IconSpacingLogic.cs" />
     <Compile Include="IconSpacing\IconSpacingWindow.xaml.cs">
       <DependentUpon>IconSpacingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Repository\WindowManager.cs" />
+    <Compile Include="ShortcutExtension.cs" />
+    <Page Include="ChangeFont\ChangeFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DeCompress\CompressWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -136,6 +147,7 @@
   <ItemGroup>
     <Content Include="DeCompress\SharpCompress.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

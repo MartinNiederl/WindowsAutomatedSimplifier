@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using WindowsAutomatedSimplifier.Repository;
 
 namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
 {
@@ -12,6 +13,7 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
         private readonly int _headerlength = 14 + Environment.NewLine.Length;
         public FolderReader(string path)
         {
+            if (string.IsNullOrEmpty(path)) return;
             _path = path;
             foreach (string line in File.ReadLines(_path))
             {
@@ -22,7 +24,13 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
             }
         }
 
-        public byte[] ReadFileByIndex(int index) => ReadFromPosition(_header[index].Position, _header[index].Length);
+        
+
+        public byte[] ReadFileByIndex(int index)
+        {
+            byte[] file = ReadFromPosition(_header[index].Position, _header[index].Length);
+            return Encryption.DecryptBytes(file, "password");
+        }
 
         private byte[] ReadFromPosition(int position, int length)
         {
@@ -38,10 +46,19 @@ namespace WindowsAutomatedSimplifier.PasswordProtectedFolder
             return data;
         }
 
+        public void SaveAllFiles()
+        {
+            for (int i = 0; SaveFileByIndex(i); i++) ;
+        }
         public bool SaveFileByIndex(int index)
         {
-            try {
-                File.WriteAllBytes(@"C:\Users\Mani\Documents\Schule\Projektentwicklung" + _header[index].Filename, ReadFileByIndex(index));
+            try
+            {
+                //TODO überarbeiten - Geschwindigkeit optimieren indem nur einmal aufgerufen!
+                string path = Path.GetDirectoryName(_path) + "\\" + Path.GetFileNameWithoutExtension(_path);
+                Directory.CreateDirectory(path);
+                //TODO relativen Pfad für Unterverzeichnisse hinzufügen
+                File.WriteAllBytes(path + _header[index].Filename, ReadFileByIndex(index));
             }
             catch (ArgumentOutOfRangeException) {
                 return false;
