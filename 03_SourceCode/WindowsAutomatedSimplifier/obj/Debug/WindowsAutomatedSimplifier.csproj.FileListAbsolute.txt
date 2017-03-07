@@ -77,3 +77,6 @@ C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutom
 C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier.csproj.GenerateResource.Cache
 C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\ChangeFont\ChangeFont.baml
 C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\ChangeFont\ChangeFont.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\CompressImage\CompressImage.g.cs
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\WindowsAutomatedSimplifier_MarkupCompile.lref
+C:\Users\Mani\Documents\Schule\Projektentwicklung\WAS\03_SourceCode\WindowsAutomatedSimplifier\obj\Debug\CompressImage\CompressImage.baml

@@ -71,6 +71,10 @@
     <Compile Include="ChangeFont\ChangeFont.xaml.cs">
       <DependentUpon>ChangeFont.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CompressImage\CompressImage.xaml.cs">
+      <DependentUpon>CompressImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompressImage\ImageCompression.cs" />
     <Compile Include="FileSystem\FileSystem.cs" />
     <Compile Include="PasswordProtectedFolder\ByteFile.cs" />
     <Compile Include="PasswordProtectedFolder\Encryption.cs" />
@@ -86,6 +90,10 @@
     <Compile Include="Repository\WindowManager.cs" />
     <Compile Include="ShortcutExtension.cs" />
     <Page Include="ChangeFont\ChangeFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompressImage\CompressImage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Windows;
 using System.Drawing.Text;
+using WindowsAutomatedSimplifier.Repository;
 using Microsoft.Win32;
 using FontFamily = System.Drawing.FontFamily;
 
 namespace WindowsAutomatedSimplifier.ChangeFont
 {
-    /// <summary>
-    /// Interaktionslogik für Window1.xaml
-    /// </summary>
     public partial class FontPicker : Window
     {
         private const string SOURCE_PATH = @"HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics\";
@@ -27,21 +25,25 @@ namespace WindowsAutomatedSimplifier.ChangeFont
         {
             string selectedItem = CbFont.SelectedItem.ToString();
             byte[] value = Registry.GetValue(SOURCE_PATH, selectedItem, "") as byte[];
-            if (value == null) return;
+            if (value == null || LbFontFamily.SelectedItem == null)
+            {
+                AutoClosingMessageBox.Show("No font selected or other error!", "Error occured", 2000);
+                return;
+            }
 
-            GetNewFontBytes(value, LbFontFamily.SelectedItem.ToString());
-            //Registry.SetValue(SOURCE_PATH, selectedItem, value);
+            value = GetNewFontBytes(value, LbFontFamily.SelectedItem.ToString());
+            Registry.SetValue(SOURCE_PATH, selectedItem, value);
 
             Close();
         }
 
-        private static byte[] GetNewFontBytes(byte[] old, string fontname)
+        private static byte[] GetNewFontBytes(byte[] byteEntry, string fontname)
         {
             for (int i = 28, j = 0; i < 92; i += 2, j++) {
-                if (j < fontname.Length) old[i] = Convert.ToByte(fontname[j]);
-                else old[i] = 00;
+                if (j < fontname.Length) byteEntry[i] = Convert.ToByte(fontname[j]);
+                else byteEntry[i] = 00;
             }
-            return old;
+            return byteEntry;
         }
     }
 }

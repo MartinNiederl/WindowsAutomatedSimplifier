@@ -39,7 +39,8 @@
         <Button x:Name="BtnDeactivateSCExtension" Content="Deactivate" Click="SCExtension" Grid.Row="7" Grid.Column="2" Margin="2"/>
         
         <Button x:Name="UpdateRegistry" Content="SaveChanges" Grid.Row="8" Grid.Column="1" Margin="2" Click="UpdateRegistry_Click"/>
-        <Button x:Name="FontChange" Content="ChangeFont" Grid.Column="1" Margin="2" Grid.Row="9" Click="FontChange_Click" />
+        <Button x:Name="FontChange" Content="ChangeFont" Grid.Column="0" Margin="2" Grid.Row="9" Click="FontChange_Click" />
+        <Button x:Name="BtnImage" Content="Button" Grid.Column="2" Grid.Row="9" Margin="2" Click="BtnImage_Click"/>
     </Grid>
     
 </Window>

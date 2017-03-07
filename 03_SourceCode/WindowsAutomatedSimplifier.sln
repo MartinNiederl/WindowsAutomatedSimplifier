@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsAutomatedSimplifier", "WindowsAutomatedSimplifier\WindowsAutomatedSimplifier.csproj", "{0C72BB47-A4C4-4006-9748-63B3DC5101CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{B561C897-A29E-4C06-8ADE-AB1DF844D656}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,17 +17,12 @@ Global
 		{0C72BB47-A4C4-4006-9748-63B3DC5101CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C72BB47-A4C4-4006-9748-63B3DC5101CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C72BB47-A4C4-4006-9748-63B3DC5101CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B561C897-A29E-4C06-8ADE-AB1DF844D656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B561C897-A29E-4C06-8ADE-AB1DF844D656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B561C897-A29E-4C06-8ADE-AB1DF844D656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B561C897-A29E-4C06-8ADE-AB1DF844D656}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://martinniederl.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = WindowsAutomatedSimplifier\\WindowsAutomatedSimplifier.csproj
-		SccProjectName1 = WindowsAutomatedSimplifier
-		SccLocalPath1 = WindowsAutomatedSimplifier
 	EndGlobalSection
 EndGlobal

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using WindowsAutomatedSimplifier.ChangeFont;
+using WindowsAutomatedSimplifier.CompressImage;
 //using System.Windows.Forms;
 using WindowsAutomatedSimplifier.DeCompress;
 using WindowsAutomatedSimplifier.IconSpacing;
@@ -112,6 +113,11 @@ namespace WindowsAutomatedSimplifier
         private void FontChange_Click(object sender, RoutedEventArgs e)
         {
             new FontPicker().ShowDialog();
+        }
+
+        private void BtnImage_Click(object sender, RoutedEventArgs e)
+        {
+            new ImageCompression(@"C:\Users\Mani\Pictures\Sonstige\Sonstige\Landschaft.jpg");
         }
     }
 }
